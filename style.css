@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --header: #8E9AAF;
+  --subTitle: #CBC0D3;
+  --letters: #4A4E69;
+  --description: #FEEAFA;
+  --body: #EFF1FF;
+}
+
+@media (max-width: 20em) {
+  header {
+    background-color: var(--header);
+  
+    height: 28rem;
+  }
+  
+  header > img {
+    display: block;
+  
+    padding: 2.6rem 0;
+    margin: 0 auto;
+  }
+  
+  header > h1 {
+    background-color: var(--subTitle);
+    color: #FFF;
+  
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  
+    padding: .6rem;
+  }
+  
+  body { 
+    background-color: var(--body);
+  
+    max-width: 47.9rem;
+  }
+
+  main {
+    width: 28rem;
+    margin: 2.3rem auto 6rem;
+  }
+
+  main p:first-child {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.47rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #23053A;
+
+    width: 26.5rem;
+    margin: 0 auto 2rem;
+  }
+  
+  main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    margin: 0 auto;
+  }
+  
+  main img {
+    width: 28rem;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  div > .card:nth-child(2) {
+    animation: fromRight 2s;
+  }
+
+  div > .card:nth-child(3) {
+    animation: fromLeft 2s;
+  }
+
+  div > .card:nth-child(4) {
+    animation: fromRight 2s;
+  }
+
+  div > .card:nth-child(5) {
+    animation: fromLeft 2s;
+  }
+
+  .card h2 {
+    font-family: 'Staatliches', cursive;
+    color: var(--letters);
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    height: 3.5rem;
+    padding: 0 2.2rem;
+    border-radius: 20px;
+    background-color: var(--description);
+
+    display: inline-flex;
+    align-items: center;
+  }
+
+  @keyframes fromRight {
+    from{
+      opacity: 0;
+      transform: translateX(10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes fromLeft {
+    from{
+      opacity: 0;
+      transform: translateX(-10px);      
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+}
